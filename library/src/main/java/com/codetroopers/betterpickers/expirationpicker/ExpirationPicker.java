@@ -7,8 +7,6 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.text.format.DateFormat;
 import android.util.AttributeSet;
 import android.view.HapticFeedbackConstants;
@@ -18,6 +16,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.codetroopers.betterpickers.R;
 import com.codetroopers.betterpickers.datepicker.DatePicker;
@@ -85,7 +86,11 @@ public class ExpirationPicker extends LinearLayout implements Button.OnClickList
     public ExpirationPicker(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
-        mDateFormatOrder = DateFormat.getDateFormatOrder(mContext);
+        try {
+            mDateFormatOrder = DateFormat.getDateFormatOrder(mContext);
+        } catch (Exception e) {
+            mDateFormatOrder = new char[] { 'M', 'd', 'y' };
+        }
         mMonthAbbreviations = DatePicker.makeLocalizedMonthAbbreviations();
         LayoutInflater layoutInflater =
                 (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

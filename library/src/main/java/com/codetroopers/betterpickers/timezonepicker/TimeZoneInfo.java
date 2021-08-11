@@ -18,7 +18,6 @@ package com.codetroopers.betterpickers.timezonepicker;
 
 import android.content.Context;
 import android.os.Build;
-import android.support.annotation.NonNull;
 import android.text.Spannable;
 import android.text.Spannable.Factory;
 import android.text.format.DateUtils;
@@ -26,6 +25,8 @@ import android.text.format.Time;
 import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.util.SparseArray;
+
+import androidx.annotation.NonNull;
 
 import java.lang.reflect.Field;
 import java.text.DateFormat;

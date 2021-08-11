@@ -89,7 +89,12 @@ public class DateView extends PickerLinearLayout {
         mDate = (ZeroTopPaddingTextView) findViewById(R.id.date);
         mYearLabel = (ZeroTopPaddingTextView) findViewById(R.id.year_label);
         // Reorder based on locale
-        char[] dateFormatOrder = DateFormat.getDateFormatOrder(getContext());
+        char[] dateFormatOrder;
+        try {
+            dateFormatOrder = DateFormat.getDateFormatOrder(getContext());
+        } catch (Exception e) {
+            dateFormatOrder = new char[] { 'M', 'd', 'y' };
+        }
         removeAllViews();
         for (int i = 0; i < dateFormatOrder.length; i++) {
             switch (dateFormatOrder[i]) {

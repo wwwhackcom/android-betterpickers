@@ -1,6 +1,4 @@
 apply plugin: 'com.android.library'
-apply from: 'https://raw.githubusercontent.com/shamanland/gradle-mvn-push/master/gradle-mvn-push.gradle' //contains fix for javadoc issues
-
 
 android {
 
@@ -35,7 +33,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.nineoldandroids:library:2.4.0'
-    compile 'com.android.support:appcompat-v7:25.0.1'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
 }

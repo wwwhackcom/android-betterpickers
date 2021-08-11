@@ -2,35 +2,23 @@
 
 buildscript {
     repositories {
+        google()
         jcenter()
         mavenLocal()
         mavenCentral()
-        maven { url 'https://jitpack.io' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
-        // to auto install sdk components when building see #248
-        // classpath 'com.jakewharton.sdkmanager:gradle-plugin:0.12.+'
-        classpath 'com.github.plastiv:sdk-manager-plugin:b04aea1cddf87e78db9a4372794d678f9e568c48'
-
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath 'com.android.tools.build:gradle:4.2.2'
     }
 }
 
 allprojects {
 
     version = VERSION_NAME
-    group = GROUP
     repositories {
+        google()
         jcenter()
         mavenLocal()
         mavenCentral()
     }
-    apply plugin: 'android-sdk-manager' //see #248
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '3.2'
 }

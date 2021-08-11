@@ -17,6 +17,7 @@
 package com.codetroopers.betterpickers.recurrencepicker;
 
 import android.app.Activity;
+import androidx.fragment.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
@@ -25,9 +26,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.annotation.NonNull;
-import android.support.v4.app.DialogFragment;
-import android.support.v7.widget.SwitchCompat;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -59,6 +57,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.SwitchCompat;
+
 import com.codetroopers.betterpickers.OnDialogDismissListener;
 import com.codetroopers.betterpickers.R;
 import com.codetroopers.betterpickers.calendardatepicker.CalendarDatePickerDialogFragment;
@@ -73,7 +74,7 @@ public class RecurrencePickerDialogFragment extends DialogFragment implements On
         android.widget.RadioGroup.OnCheckedChangeListener,
         CalendarDatePickerDialogFragment.OnDateSetListener {
 
-    private static final String TAG = "RecurrencePickerDialogFragment";
+    private static final String TAG = "RecurrencePickerDialog";
 
     // in dp's
     private static final int MIN_SCREEN_WIDTH_FOR_SINGLE_ROW_WEEK = 450;

@@ -17,13 +17,13 @@
 package com.codetroopers.betterpickers.radialtimepicker;
 
 import android.app.ActionBar.LayoutParams;
+import androidx.fragment.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.KeyCharacterMap;
@@ -281,7 +281,7 @@ public class RadialTimePickerDialogFragment extends DialogFragment implements On
             }
         } else {
             if (mIs24HourMode == null) {
-                mIs24HourMode = DateFormat.is24HourFormat(getContext());
+                mIs24HourMode = DateFormat.is24HourFormat(getActivity());
             }
         }
     }

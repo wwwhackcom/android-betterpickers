@@ -1,7 +1,9 @@
 package com.codetroopers.betterpickers.sample.fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,6 +44,7 @@ public class SampleHmsFragment extends Fragment implements HmsPickerDialogFragme
         return view;
     }
 
+    @SuppressLint("StringFormatMatches")
     @Override
     public void onDialogHmsSet(int reference, boolean isNegative, int hours, int minutes, int seconds) {
         mResultTextView.setText(getString(R.string.hms_picker_result_value_multiline, hours, minutes, seconds, isNegative));

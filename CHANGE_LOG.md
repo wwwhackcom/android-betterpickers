@@ -1,6 +1,10 @@
 
 Changelog
 =========
+**4.0.0**
+* Update dependencies and migrate to androidx
+* Fix crash issue "Error inflating DatePicker #214" (on some brands) <a href="https://github.com/code-troopers/android-betterpickers/issues/214">Bad pattern character 'E'</a>
+
 **3.1.0**
 * Fix Calendar#getTimeInMillis with millis correctly set to 0 (#327)
 * Reduce width of erase button for all pickers (#337 #330 #287)

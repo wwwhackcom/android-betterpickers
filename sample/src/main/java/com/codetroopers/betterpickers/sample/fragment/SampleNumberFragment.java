@@ -1,7 +1,9 @@
 package com.codetroopers.betterpickers.sample.fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,6 +48,7 @@ public class SampleNumberFragment extends Fragment
         return view;
     }
 
+    @SuppressLint("StringFormatMatches")
     @Override
     public void onDialogNumberSet(int reference, BigInteger number, double decimal, boolean isNegative, BigDecimal fullNumber) {
         mResultTextView.setText(getString(R.string.number_picker_result_value, number, decimal, isNegative, fullNumber));

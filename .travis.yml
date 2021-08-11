@@ -1,0 +1,19 @@
+language: android
+dist: trusty
+android:
+  components:
+    # - tools
+    # - platform-tools
+    - build-tools-30.0.3
+    - android-30
+    - extra-google-m2repository
+    - extra-android-m2repository
+    - sys-img-x86-android-28
+    - sys-img-armeabi-v7a-android-17
+
+before_script:
+  - echo $TRAVIS_BRANCH
+  - echo $TRAVIS_TAG
+
+script:
+  - ./gradlew assemble

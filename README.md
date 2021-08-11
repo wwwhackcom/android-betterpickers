@@ -1,16 +1,26 @@
-# /!\ This Project is no longer maintained /!\ 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/net.wwwhackcom/android-betterpickers-x/badge.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/net.wwwhackcom/android-betterpickers-x)
+[![API](https://img.shields.io/badge/API-16%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=16)
+[![CI Status](https://travis-ci.com/wwwhackcom/android-betterpickers.svg?branch=master)](https://travis-ci.com/wwwhackcom/android-betterpickers)
+
+# This Project is a fork repo of betterpickers as the original one is no longer maintained.
+
+Update dependencies and migrate to androidx for better compatibility. Also, fix one issue "Error inflating DatePicker #214", which causes crash on some phone brands, please check more details from this link: <a href="https://github.com/code-troopers/android-betterpickers/issues/214">Bad pattern character 'E'</a>
+
+Just easily change the dependency from: 
+```groovy
+compile 'com.code-troopers.betterpickers:library:3.1.0'
+```
+to:
+```groovy
+implementation 'net.wwwhackcom:android-betterpickers-x:4.0.0'
+```
+
+And that's it.
 
 
-[![Maven Central](https://img.shields.io/maven-central/v/com.code-troopers.betterpickers/library.svg?style=flat)](https://repo1.maven.org/maven2/com/code-troopers/betterpickers/library/)
-[![API](https://img.shields.io/badge/API-9%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=9)
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Android%20Betterpickers-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/118)
+<img src="https://raw.githubusercontent.com/wwwhackcom/android-betterpickers/master/sample/imagery/screenshot_calendar_date.png" width="120">  <img src="https://raw.githubusercontent.com/wwwhackcom/android-betterpickers/master/sample/imagery/screenshot_radial_time.png" width="120">  <img src="https://raw.githubusercontent.com/wwwhackcom/android-betterpickers/master/sample/imagery/screenshot_recurrence.png" width="120">  <img src="https://raw.githubusercontent.com/wwwhackcom/android-betterpickers/master/sample/imagery/screenshot_time_zone.png" width="120">
 
-[![Built With Cloudbees](https://www.cloudbees.com/sites/default/files/styles/large/public/Button-Built-on-CB-1.png?itok=3Tnkun-C)](https://codetroopers.ci.cloudbees.com/job/betterpickers-master/)
-
-
-<img src="https://raw.githubusercontent.com/code-troopers/android-betterpickers/master/sample/imagery/screenshot_calendar_date.png" width="120">  <img src="https://raw.githubusercontent.com/code-troopers/android-betterpickers/master/sample/imagery/screenshot_radial_time.png" width="120">  <img src="https://raw.githubusercontent.com/code-troopers/android-betterpickers/master/sample/imagery/screenshot_recurrence.png" width="120">  <img src="https://raw.githubusercontent.com/code-troopers/android-betterpickers/master/sample/imagery/screenshot_time_zone.png" width="120">
-
-<img src="https://raw.githubusercontent.com/code-troopers/android-betterpickers/master/sample/imagery/screenshot_date.png" width="120">  <img src="https://raw.githubusercontent.com/code-troopers/android-betterpickers/master/sample/imagery/screenshot_expiration.png" width="120">  <img src="https://raw.githubusercontent.com/code-troopers/android-betterpickers/master/sample/imagery/screenshot_hms.png" width="120">  <img src="https://raw.githubusercontent.com/code-troopers/android-betterpickers/master/sample/imagery/screenshot_number.png" width="120">  <img src="https://raw.githubusercontent.com/code-troopers/android-betterpickers/master/sample/imagery/screenshot_time.png" width="120">
+<img src="https://raw.githubusercontent.com/wwwhackcom/android-betterpickers/master/sample/imagery/screenshot_date.png" width="120">  <img src="https://raw.githubusercontent.com/wwwhackcom/android-betterpickers/master/sample/imagery/screenshot_expiration.png" width="120">  <img src="https://raw.githubusercontent.com/wwwhackcom/android-betterpickers/master/sample/imagery/screenshot_hms.png" width="120">  <img src="https://raw.githubusercontent.com/wwwhackcom/android-betterpickers/master/sample/imagery/screenshot_number.png" width="120">  <img src="https://raw.githubusercontent.com/wwwhackcom/android-betterpickers/master/sample/imagery/screenshot_time.png" width="120">
 
 
 DialogFragments modeled after the AOSP Clock and Calendar apps to improve UX for picking time, date, numbers, and other things.
@@ -27,16 +37,16 @@ Including in Your Project
 ### Gradle
 
 ```groovy
-compile 'com.code-troopers.betterpickers:library:3.1.0'
+implementation 'net.wwwhackcom:android-betterpickers-x:4.0.0'
 ```
 
 ### Maven
 
 ```xml
 <dependency>
-  <groupId>com.code-troopers.betterpickers</groupId>
-  <artifactId>library</artifactId>
-  <version>3.1.0</version>
+  <groupId>net.wwwhackcom</groupId>
+  <artifactId>android-betterpickers-x</artifactId>
+  <version>4.0.0</version>
   <type>aar</type>
 </dependency>
 ```
@@ -257,8 +267,8 @@ Theming
   ```
   4. Result
 
-  <img src="https://raw.githubusercontent.com/code-troopers/android-betterpickers/master/sample/imagery/screenshot_calendar_date_customized.png" width="120">
-  <img src="https://raw.githubusercontent.com/code-troopers/android-betterpickers/master/sample/imagery/screenshot_radial_time_customized.png" width="120">
+  <img src="https://raw.githubusercontent.com/wwwhackcom/android-betterpickers/master/sample/imagery/screenshot_calendar_date_customized.png" width="120">
+  <img src="https://raw.githubusercontent.com/wwwhackcom/android-betterpickers/master/sample/imagery/screenshot_radial_time_customized.png" width="120">
 
 ### Date Picker / Expiration Picker / HMS Picker / Number Picker / Time Picker
 
@@ -298,10 +308,6 @@ Theming
   dpb.show();
   ```
 
-Actionbarsherlock compatibility
-===============================
-If you use actionbarsherlock which is not compatible with appcompat-v7 you can use the latest version of the library on the 1.x.x branch.
-
 You can view the readme [here](README_1.6.0.md)
 
 ChangeLog
@@ -338,6 +344,7 @@ Icon | Application
 
 Credits
 =======
+Thanks to [Code Troopers][16] for the initial version.
 
 Thanks to [Derek Brameyer][15] for the initial version.
 
@@ -350,7 +357,7 @@ Thanks to all contributors !
 License
 =======
 
-    Copyright 2013 Derek Brameyer, Code-Troopers
+    Copyright 2021 Derek Brameyer, Code-Troopers, Nick Wang
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -364,16 +371,17 @@ License
     See the License for the specific language governing permissions and
     limitations under the License.
 
- [5]: https://raw.github.com/code-troopers/android-betterpickers/master/sample/imagery/web_feature_graphic.png
+ [5]: https://raw.githubusercontent.com/wwwhackcom/android-betterpickers/master/sample/imagery/web_feature_graphic.png
  [6]: https://play.google.com/store/apps/details?id=com.codetroopers.betterpickersapp
  [7]: http://developer.android.com/guide/developing/projects/projects-eclipse.html
  [8]: http://developer.android.com/guide/developing/projects/projects-eclipse.html#ReferencingLibraryProject
  [9]: http://viewpagerindicator.com/
- [10]: https://github.com/code-troopers/android-betterpickers/issues/new
+ [10]: https://github.com/wwwhackcom/android-betterpickers/issues/new
  [11]: https://plus.google.com/108284392618554783657/posts
  [12]: http://willowtreeapps.github.io/OAK/
  [13]: http://www.willowtreeapps.com/
  [15]: https://github.com/derekbrameyer/
+ [16]: https://github.com/code-troopers/android-betterpickers/
 
  [Trello]:https://play.google.com/store/apps/details?id=com.trello
  [Navig'Tours]: https://play.google.com/store/apps/details?id=com.codetroopers.transport.tours
