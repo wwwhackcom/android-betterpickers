@@ -1,4 +1,4 @@
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/net.wwwhackcom/android-betterpickers-x/badge.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/net.wwwhackcom/android-betterpickers-x)
+[![Maven Central](https://img.shields.io/maven-central/v/net.wwwhackcom/android-betterpickers-x)](https://search.maven.org/artifact/net.wwwhackcom/android-betterpickers-x/4.0.0/aar)
 [![API](https://img.shields.io/badge/API-16%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=16)
 [![CI Status](https://travis-ci.com/wwwhackcom/android-betterpickers.svg?branch=master)](https://travis-ci.com/wwwhackcom/android-betterpickers)
 
