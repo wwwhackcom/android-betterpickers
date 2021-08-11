@@ -8,12 +8,15 @@ android:
     - android-30
     - extra-google-m2repository
     - extra-android-m2repository
-    - sys-img-x86-android-28
-    - sys-img-armeabi-v7a-android-17
+  licenses:
+    - 'android-sdk-preview-license-52d11cd2'
+    - 'android-sdk-license-.+'
+    - 'google-gdk-license-.+'
 
 before_script:
   - echo $TRAVIS_BRANCH
   - echo $TRAVIS_TAG
+  - yes | sdkmanager "platforms;android-30"
 
 script:
   - ./gradlew assemble
